@@ -1,0 +1,16 @@
+# Custom Shortcuts
+Applications -> System tools -> Settings -> keyboard -> Custom Shortcut
+
+name: terminal
+command: gnome-terminal
+shortcut: ctrl + alt + t
+
+name: explorer
+command: nautilus -w
+shortcut: super + e
+
+# Gnome Shortcus
+Applications -> System tools -> Settings -> keyboard -> Keyboard Shortcuts
+
+Show the run command prompt: super + r
+Hide all normal windows: super + d
