@@ -1,5 +1,6 @@
 sudo dnf install xclip -y
 sudo dnf install gnome-tweak-tool -y
+sudo dnf install vim -y
 
 # nautilus - add "New Document" or right click
 touch ~/Templates/Empty\ Document
