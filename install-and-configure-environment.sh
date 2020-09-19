@@ -20,3 +20,8 @@ wget https://github.com/microsoft/cascadia-code/releases/download/v2009.14/Casca
 sudo mkdir -p /usr/share/fonts/truetype && \
 sudo unzip CascadiaCode-2009.14.zip -d /usr/share/fonts/truetype && \
 rm -f CascadiaCode-2009.14.zip*
+
+# set cedilha for international keyboard (dead acute + c)
+echo "<dead_acute> <C> : \"Ç\" Ccedilla # LATIN CAPITAL LETTER C WITH CEDILLA" >> ~/.XCompose
+echo "<dead_acute> <c> : \"ç\" ccedilla # LATIN SMALL LETTER C WITH CEDILLA" >> ~/.XCompose
+
