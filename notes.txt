@@ -5,7 +5,7 @@ name: terminal
 command: gnome-terminal
 shortcut: ctrl + alt + t
 
-name: explorer
+name: nautilus
 command: nautilus -w
 shortcut: super + e
 
