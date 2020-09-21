@@ -1,2 +1,3 @@
 
 https://extensions.gnome.org/extension/6/applications-menu/
+https://extensions.gnome.org/extension/307/dash-to-dock/

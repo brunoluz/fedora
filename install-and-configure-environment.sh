@@ -5,16 +5,22 @@ sudo dnf install chrome-gnome-shell -y
 sudo dnf install dnfdragora -y # visual package manager for fedora
 sudo dnf install snapd -y
 sudo ln -s /var/lib/snapd/snap /snap
-sudo snap install spotify
 sudo snap install code --classic
- 
+
+# rpm fusion free repository
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -y
+# rpm fusion non-free repository
+sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
+
+# spotify (must open spotify from application lpf-spotify-client after)
+sudo dnf install lpf-spotify-client -y
 
 # nautilus - add "New Document" or right click
 touch ~/Templates/Empty\ Document
 
 # install chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm && \
-sudo dnf localinstall google-chrome-stable_current_x86_64.rpm -y && \
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+sudo dnf localinstall google-chrome-stable_current_x86_64.rpm -y
 rm -f google-chrome-stable_current_x86_64.rpm*
 
 # tap to click
