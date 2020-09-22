@@ -38,11 +38,11 @@ gsettings set org.gnome.desktop.background primary-color 'rgb(66, 81, 100)'
 
 # custom path
 mkdir ~/.custom_path
-echo "CUSTOM_PATH=$( getent passwd "$USER" | cut -d: -f6 )/.custom_path" >> ~/.bashrc
-echo 'if [[ ! $PATH == *"$CUSTOM_PATH"* ]]; then' >> ~/.bashrc
-echo '   PATH="$PATH:$CUSTOM_PATH"' >> ~/.bashrc
-echo 'fi' >> ~/.bashrc
-echo 'export PATH' >> ~/.bashrc
+echo "CUSTOM_PATH=$( getent passwd $USER | cut -d: -f6 )/.custom_path
+if [[ ! \$PATH == *\"\$CUSTOM_PATH\"* ]]; then
+   PATH=\"\$PATH:\$CUSTOM_PATH\"
+fi
+export PATH" >> ~/.bashrc
 
 ln -s "$(which google-chrome)" ~/.custom_path/chrome
 ln -s "$(which gnome-session-quit)" ~/.custom_path/logoff
