@@ -32,6 +32,10 @@ sudo mkdir -p /usr/share/fonts/truetype && \
 sudo unzip CascadiaCode-2009.14.zip -d /usr/share/fonts/truetype && \
 rm -f CascadiaCode-2009.14.zip*
 
+# set desktop as solid color
+gsettings set org.gnome.desktop.background picture-uri ''
+gsettings set org.gnome.desktop.background primary-color 'rgb(66, 81, 100)'
+
 # custom path
 mkdir ~/.custom_path
 echo "CUSTOM_PATH=$( getent passwd "$USER" | cut -d: -f6 )/.custom_path" >> ~/.bashrc
