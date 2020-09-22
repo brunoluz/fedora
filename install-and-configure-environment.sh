@@ -32,6 +32,17 @@ sudo mkdir -p /usr/share/fonts/truetype && \
 sudo unzip CascadiaCode-2009.14.zip -d /usr/share/fonts/truetype && \
 rm -f CascadiaCode-2009.14.zip*
 
+# custom path
+mkdir ~/.custom_path
+echo "CUSTOM_PATH=$( getent passwd "$USER" | cut -d: -f6 )/.custom_path" >> ~/.bashrc
+echo 'if [[ ! $PATH == *"$CUSTOM_PATH"* ]]; then' >> ~/.bashrc
+echo '   PATH="$PATH:$CUSTOM_PATH"' >> ~/.bashrc
+echo 'fi' >> ~/.bashrc
+echo 'export PATH' >> ~/.bashrc
+
+ln -s "$(which google-chrome)" ~/.custom_path/chrome
+ln -s "$(which gnome-session-quit)" ~/.custom_path/logoff
+
 # set cedilha for international keyboard (dead acute + c)
 echo "<dead_acute> <C> : \"Ç\" Ccedilla # LATIN CAPITAL LETTER C WITH CEDILLA" >> ~/.XCompose
 echo "<dead_acute> <c> : \"ç\" ccedilla # LATIN SMALL LETTER C WITH CEDILLA" >> ~/.XCompose
