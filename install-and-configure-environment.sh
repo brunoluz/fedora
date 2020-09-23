@@ -65,4 +65,4 @@ RPMREPO
 sudo dnf install opera-developer -y
 
 # codecs (firefox and opera use them to play some streams)
-dnf install ffmpeg-libs compat-ffmpeg28
+dnf install ffmpeg-libs compat-ffmpeg28 -y
