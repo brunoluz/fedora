@@ -51,18 +51,5 @@ ln -s "$(which gnome-session-quit)" ~/.custom_path/logoff
 echo "<dead_acute> <C> : \"Ç\" Ccedilla # LATIN CAPITAL LETTER C WITH CEDILLA" >> ~/.XCompose
 echo "<dead_acute> <c> : \"ç\" ccedilla # LATIN SMALL LETTER C WITH CEDILLA" >> ~/.XCompose
 
-# opera browser
-sudo rpm --import https://rpm.opera.com/rpmrepo.key
-sudo tee /etc/yum.repos.d/opera.repo <<RPMREPO
-[opera]
-name=Opera packages
-type=rpm-md
-baseurl=https://rpm.opera.com/rpm
-gpgcheck=1
-gpgkey=https://rpm.opera.com/rpmrepo.key
-enabled=1
-RPMREPO
-sudo dnf install opera-developer -y
-
 # codecs (firefox and opera use them to play some streams)
 dnf install ffmpeg-libs compat-ffmpeg28 -y
