@@ -53,4 +53,16 @@ echo "<dead_acute> <C> : \"Ç\" Ccedilla # LATIN CAPITAL LETTER C WITH CEDILLA" 
 echo "<dead_acute> <c> : \"ç\" ccedilla # LATIN SMALL LETTER C WITH CEDILLA" >> ~/.XCompose
 
 # codecs (firefox and opera use them to play some streams)
-dnf install ffmpeg-libs compat-ffmpeg28 -y
+sudo dnf install ffmpeg-libs compat-ffmpeg28 -y
+
+# extra mouse buttons to control volume
+sudo dnf install xbindkeys xdotool -y
+xbindkeys -d > ~/.xbindkeysrc
+echo "
+# Adjust volume with mouse buttons
+\"xdotool key XF86AudioLowerVolume\"
+    b:8
+\"xdotool key XF86AudioRaiseVolume\"
+    b:9
+" >> ~/.xbindkeysrc
+echo "xbindkeys" >> ~/.profile
