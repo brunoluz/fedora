@@ -14,3 +14,6 @@ Applications -> System tools -> Settings -> keyboard -> Keyboard Shortcuts
 
 Show the run command prompt: super + r
 Hide all normal windows: super + d
+
+# Configure mouse scroll speed
+https://io.bikegremlin.com/11541/linux-mouse-scroll-speed/
