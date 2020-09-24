@@ -66,3 +66,6 @@ echo "
     b:9
 " >> ~/.xbindkeysrc
 echo "xbindkeys" >> ~/.profile
+
+# open with code (https://github.com/harry-cpp/code-nautilus)
+wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
