@@ -70,6 +70,9 @@ echo "xbindkeys" >> ~/.profile
 # open with code (https://github.com/harry-cpp/code-nautilus)
 wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
 
+# backspace shortcut for nautilus (https://github.com/7aman/backspace-up)
+wget -qO- https://raw.githubusercontent.com/7aman/backspace-up/master/install.sh | bash
+
 # imwhell 
 sudo dnf install imwheel -y
 echo "\".*\"
