@@ -73,7 +73,7 @@ wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.
 # backspace shortcut for nautilus (https://github.com/7aman/backspace-up)
 wget -qO- https://raw.githubusercontent.com/7aman/backspace-up/master/install.sh | bash
 
-# imwhell 
+# imwheel 
 sudo dnf install imwheel -y
 echo "\".*\"
 None,      Up,   Button4, 2
