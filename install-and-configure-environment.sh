@@ -67,8 +67,8 @@ echo "
 " >> ~/.xbindkeysrc
 echo "xbindkeys" >> ~/.profile
 
-# open with code (https://github.com/harry-cpp/code-nautilus)
-wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
+# open with code 
+wget -qO- https://raw.githubusercontent.com/brunoluz/code-nautilus/master/install.sh | bash
 
 # backspace shortcut for nautilus (https://github.com/7aman/backspace-up)
 wget -qO- https://raw.githubusercontent.com/7aman/backspace-up/master/install.sh | bash
@@ -83,3 +83,14 @@ Control_L, Down, Control_L|Button5
 Shift_L,   Up,   Shift_L|Button4
 Shift_L,   Down, Shift_L|Button5" >> ~/.imwheelrc
 echo "imwheel" >> ~/.profile
+
+# mcdir command
+cat << EOF >> ~/.bashrc 
+
+# mkdir and cd
+mcdir ()
+{
+  mkdir -p -- "\$1" &&
+  cd -P -- "\$1"
+}
+EOF
