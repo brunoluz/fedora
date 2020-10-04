@@ -1,5 +1,5 @@
 # grup file
-/etc/default/grub
+sudo vim /etc/default/grub
 
 ## BIOS ##
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
