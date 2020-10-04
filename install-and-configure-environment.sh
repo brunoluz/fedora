@@ -10,6 +10,11 @@ sudo snap install snap-store
 # change hostname
 hostnamectl set-hostname {hostname}
 
+# configure ssh
+ssh-keygen -t rsa -b 4096 -C {email}
+eval "$(ssh-agent -s)"
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
 # configure git
 git config --global user.email {email}
 git config --global user.name {name}
